@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         ul {
+            list-style-type: none; /* Remove bullet points */
+            padding-left: 0;       /* Remove left space */
+        }
+        li {
+            font-size:large;
+            padding: 1ch;
+            cursor: pointer;
+            color: black;
+        }
+    
+        li:hover {
+            color: green;
+        }
+    </style>
+    
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+            .then(() => {
+                alert("Copied: " + text);
+            })
+            .catch(err => {
+                alert("Failed to copy!");
+            });
+        }
+    </script>
+    
+</head>
+
+<body>
+
+    <body>
+        <ul>
+            <li onclick="copyToClipboard('krishnagaanth243@gmail.com')">
+                krishnagaanth243@gmail.com
+            </li>
+            <li onclick="copyToClipboard('krishnagaanthm@yahoo.in')">
+                krishnagaanthm@yahoo.in
+            </li>
+        </ul>
+</body>
+</html>
